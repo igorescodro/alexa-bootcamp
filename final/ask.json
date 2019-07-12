@@ -1,0 +1,251 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "bootcamp",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloIntent",
+                    "slots": [],
+                    "samples": [
+                        "what's up",
+                        "hey",
+                        "hi",
+                        "hello"
+                    ]
+                },
+                {
+                    "name": "BuyCandyIntent",
+                    "slots": [
+                        {
+                            "name": "candy",
+                            "type": "Candy"
+                        }
+                    ],
+                    "samples": [
+                        "Order {candy}",
+                        "I would like some {candy}",
+                        "Buy {candy}",
+                        "Order me a {candy}",
+                        "I want to buy {candy}"
+                    ]
+                },
+                {
+                    "name": "CarColorIntent",
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "Show me a car in {color} color",
+                        "I need a {color} car",
+                        "I want a {color} car",
+                        "{color} car",
+                        "Show me a {color} car"
+                    ]
+                },
+                {
+                    "name": "BuyProductIntent",
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color"
+                        },
+                        {
+                            "name": "country",
+                            "type": "AMAZON.Country"
+                        }
+                    ],
+                    "samples": [
+                        "Buy a {color} {device} to be delivered in {country}",
+                        "I want to buy a product",
+                        "I want to buy a device",
+                        "I need a {device} in {country}",
+                        "I want to buy a {device}",
+                        "I want to purchase a {device} in {color} to {country}",
+                        "I want to buy {device} in {color} to deliver in {country}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Candy",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "chocolate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cookie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cake"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "BuyProductIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "device",
+                            "type": "AMAZON.DeviceType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1218642775995.911544634778"
+                            }
+                        },
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1218642775995.424126713660"
+                            }
+                        },
+                        {
+                            "name": "country",
+                            "type": "AMAZON.Country",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1218642775995.296605271521"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.751411447999.1553922878547",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What candy?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want which candy?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which kind of candy?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.751411447999.1209386666101",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Color?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "In what color?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What color?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.751411447999",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want a {candy} in {color} . Is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1218642775995.911544634778",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which device?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "We have a lot of devices. Which one do you need?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which device do you want to buy?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1218642775995.424126713660",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What color do you want your product?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which color?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What color do you want your {device}"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1218642775995.296605271521",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which country do you want us to deliver your {color} {device} ?"
+                    }
+                ]
+            }
+        ]
+    }
+}
