@@ -1,0 +1,98 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "bootcamp",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloIntent",
+                    "slots": [],
+                    "samples": [
+                        "what's up",
+                        "hey",
+                        "hi",
+                        "hello"
+                    ]
+                },
+                {
+                    "name": "BuyCandyIntent",
+                    "slots": [
+                        {
+                            "name": "candy",
+                            "type": "Candy"
+                        }
+                    ],
+                    "samples": [
+                        "Order {candy}",
+                        "I would like some {candy}",
+                        "Buy {candy}",
+                        "Order me a {candy}",
+                        "I want to buy {candy}"
+                    ]
+                },
+                {
+                    "name": "CarColorIntent",
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "AMAZON.Color"
+                        }
+                    ],
+                    "samples": [
+                        "Show me a car in {color} color",
+                        "I need a {color} car",
+                        "I want a {color} car",
+                        "{color} car",
+                        "Show me a {color} car"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Candy",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "chocolate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cookie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cake"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
