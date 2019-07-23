@@ -2,7 +2,7 @@
 
 # Intro
 
-The Alexa Bootcamp occurred on July 20th, 2019 at [Venturus]("https://venturus.org.br/"), Brazil. This course was intent to teach how to create Alexa Skills from scratch, using Alexa Skills Kit and AWS Lambda.
+The Alexa Bootcamp occurred on July 20th, 2019 at [Venturus]("https://venturus.org.br/"), Brazil. This course was intented to teach how to create Alexa Skills from scratch, using Alexa Skills Kit and AWS Lambda.
 
 # Quick Setup 
 
